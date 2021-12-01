@@ -1,0 +1,10 @@
+plugins {
+    id "java"
+}
+
+group "co.uk.fractalwrench"
+version "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
