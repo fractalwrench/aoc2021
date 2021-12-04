@@ -2,8 +2,6 @@ package co.uk.fractalwrench;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,10 +30,8 @@ public class Day1_2 {
 
     private static List<Integer> loadInput() {
         List<Integer> list = new ArrayList<>();
-        ClassLoader classLoader = Day1_2.class.getClassLoader();
 
-        try (InputStream is = classLoader.getResourceAsStream("day1.input")) {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        try (BufferedReader reader = new ResourceReader().getReader("day1.input")) {
             String line;
 
             while ((line = reader.readLine()) != null) {
